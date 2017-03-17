@@ -1,4 +1,6 @@
 import http from 'http';
+require("babel-core/register");
+require("./src/config.es6");
 
 http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/plain'});
