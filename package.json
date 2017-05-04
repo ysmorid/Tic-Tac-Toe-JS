@@ -4,20 +4,13 @@
   "description": "A mini project to practice TDD using Mocha-chai, and JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --compilers js:babel-core/register",
     "start": "babel-node index.js --presets es2015"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ysmorid/Tic-Tac-Toe-JS.git"
   },
-  "keywords": [
-    "tic",
-    "tac",
-    "toe",
-    "tic-tac-toe-js",
-    "js"
-  ],
   "author": "Ylia M",
   "license": "ISC",
   "bugs": {
@@ -34,7 +27,30 @@
     "babel-core": "^6.24.0",
     "babel-preset-env": "^1.2.2",
     "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "request": "^2.81.0",
     "should": "^11.2.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2015,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "parser": "Babel-ESLint",
+      "rules": {
+        "semi": 2
+      }
+    },
+    "extends": "airbnb"
   }
 }
